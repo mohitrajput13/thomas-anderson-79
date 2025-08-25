@@ -79,9 +79,9 @@ const Index = () => {
             <div className="container mx-auto px-6">
               <div className="max-w-6xl mx-auto">
                 <div className="text-center mb-12">
-                  <h2 className="mb-6 text-primary">{getFieldValue('home', 'authority-title')}</h2>
+                  <h2 className="mb-6 text-primary">{t('home.authority.title')}</h2>
                   <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                    {getFieldValue('home', 'authority-subtitle')}
+                    {t('home.authority.subtitle')}
                   </p>
                 </div>
 
@@ -91,10 +91,9 @@ const Index = () => {
                       <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-6">
                         <Trophy className="w-8 h-8 text-accent-foreground" />
                       </div>
-                      <h3 className="mb-4 text-primary">Proven Track Record</h3>
+                      <h3 className="mb-4 text-primary">{t('index.authority.card1.title')}</h3>
                       <p className="text-muted-foreground">
-                        Over 31 years of transforming student-athletes into college-bound champions 
-                        with a 95% success rate in scholarship acquisition.
+                        {t('index.authority.card1.desc')}
                       </p>
                     </CardContent>
                   </Card>
@@ -104,10 +103,9 @@ const Index = () => {
                       <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-6">
                         <Target className="w-8 h-8 text-accent-foreground" />
                       </div>
-                      <h3 className="mb-4 text-primary">Personalized Strategy</h3>
+                      <h3 className="mb-4 text-primary">{t('index.authority.card2.title')}</h3>
                       <p className="text-muted-foreground">
-                        Every athlete receives a customized recruiting plan based on their unique 
-                        strengths, goals, and target college preferences.
+                        {t('index.authority.card2.desc')}
                       </p>
                     </CardContent>
                   </Card>
@@ -117,10 +115,9 @@ const Index = () => {
                       <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-6">
                         <Clock className="w-8 h-8 text-accent-foreground" />
                       </div>
-                      <h3 className="mb-4 text-primary">Early Advantage</h3>
+                      <h3 className="mb-4 text-primary">{t('index.authority.card3.title')}</h3>
                       <p className="text-muted-foreground">
-                        Start early, finish strong. Our system emphasizes the critical importance 
-                        of beginning the recruiting process in freshman year.
+                        {t('index.authority.card3.desc')}
                       </p>
                     </CardContent>
                   </Card>
@@ -134,9 +131,9 @@ const Index = () => {
             <div className="container mx-auto px-6">
               <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
                 <div>
-                  <h2 className="mb-6 text-primary">{getFieldValue('home', 'book-title')}</h2>
+                  <h2 className="mb-6 text-primary">{t('home.book.title')}</h2>
                   <p className="text-xl text-muted-foreground mb-6">
-                    {getFieldValue('home', 'book-description')}
+                    {t('home.book.description')}
                   </p>
                   <div className="flex items-center gap-4 mb-8">
                     <div className="flex items-center gap-1">
@@ -144,11 +141,11 @@ const Index = () => {
                         <Star key={i} className="w-5 h-5 fill-accent text-accent" />
                       ))}
                     </div>
-                    <span className="text-lg font-semibold text-primary">#1 Bestseller</span>
+                    <span className="text-lg font-semibold text-primary">{t('index.book.bestseller')}</span>
                   </div>
                   <div className="space-y-4 sm:space-y-0 sm:space-x-4 sm:flex">
-                    <Button className="btn-hero">Get Your Copy</Button>
-                    <Button className="btn-outline">Preview Sample</Button>
+                    <Button className="btn-hero">{t('btn.getCopy')}</Button>
+                    <Button className="btn-outline">{t('btn.previewSample')}</Button>
                   </div>
                 </div>
                 <div className="text-center">
@@ -157,7 +154,7 @@ const Index = () => {
                       <BookOpen className="w-24 h-24 text-accent-foreground" />
                     </div>
                     <div className="absolute -top-4 -right-4 bg-success text-success-foreground px-4 py-2 rounded-full font-bold text-sm animate-glow-pulse">
-                      Available Now
+                      {t('index.book.available')}
                     </div>
                   </div>
                 </div>
@@ -170,10 +167,9 @@ const Index = () => {
             <div className="container mx-auto px-6">
               <div className="max-w-6xl mx-auto">
                 <div className="text-center mb-12">
-                  <h2 className="mb-6 text-primary">Learning Hub</h2>
+                  <h2 className="mb-6 text-primary">{t('index.learningHub.title')}</h2>
                   <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                    Access comprehensive resources designed to educate, inspire, and guide 
-                    you through every step of the college recruiting process.
+                    {t('index.learningHub.subtitle')}
                   </p>
                 </div>
 
@@ -183,12 +179,11 @@ const Index = () => {
                       <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mb-4">
                         <Users className="w-6 h-6 text-accent-foreground" />
                       </div>
-                      <h3 className="mb-3 text-primary">Recruiting Unplugged Podcast</h3>
+                      <h3 className="mb-3 text-primary">{t('index.learningHub.podcast.title')}</h3>
                       <p className="text-muted-foreground text-sm mb-4">
-                        Weekly episodes featuring real recruiting stories, expert interviews, 
-                        and actionable advice.
+                        {t('index.learningHub.podcast.desc')}
                       </p>
-                      <Button className="btn-outline w-full">Listen Now</Button>
+                      <Button className="btn-outline w-full">{t('btn.listenNow')}</Button>
                     </CardContent>
                   </Card>
 
@@ -197,12 +192,11 @@ const Index = () => {
                       <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mb-4">
                         <BookOpen className="w-6 h-6 text-accent-foreground" />
                       </div>
-                      <h3 className="mb-3 text-primary">Off the Record Blog</h3>
+                      <h3 className="mb-3 text-primary">{t('index.learningHub.blog.title')}</h3>
                       <p className="text-muted-foreground text-sm mb-4">
-                        In-depth articles covering recruiting strategies, college selection, 
-                        and insider insights.
+                        {t('index.learningHub.blog.desc')}
                       </p>
-                      <Button className="btn-outline w-full">Read Articles</Button>
+                      <Button className="btn-outline w-full">{t('btn.readArticles')}</Button>
                     </CardContent>
                   </Card>
 
@@ -211,12 +205,11 @@ const Index = () => {
                       <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mb-4">
                         <TrendingUp className="w-6 h-6 text-accent-foreground" />
                       </div>
-                      <h3 className="mb-3 text-primary">Video Training Series</h3>
+                      <h3 className="mb-3 text-primary">{t('index.learningHub.video.title')}</h3>
                       <p className="text-muted-foreground text-sm mb-4">
-                        Comprehensive video courses covering every aspect of college recruiting 
-                        from planning to scholarships.
+                        {t('index.learningHub.video.desc')}
                       </p>
-                      <Button className="btn-outline w-full">Watch Videos</Button>
+                      <Button className="btn-outline w-full">{t('btn.watchVideos')}</Button>
                     </CardContent>
                   </Card>
                 </div>
@@ -228,24 +221,23 @@ const Index = () => {
           <section className="py-16 bg-gradient-to-b from-primary to-primary-glow text-primary-foreground">
             <div className="container mx-auto px-6">
               <div className="max-w-4xl mx-auto text-center">
-                <h2 className="mb-6">Are You Ready for College Recruiting?</h2>
+                <h2 className="mb-6">{t('home.quiz.title')}</h2>
                 <p className="text-xl mb-8 opacity-90">
-                  Take our free assessment to discover where you stand and what steps 
-                  you need to take to maximize your recruiting potential.
+                  {t('home.quiz.subtitle')}
                 </p>
                 <div className="grid md:grid-cols-2 gap-6 mb-8">
                   <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-lg p-6">
                     <Award className="w-12 h-12 text-accent mx-auto mb-4" />
-                    <h3 className="mb-2">Athletic Assessment</h3>
-                    <p className="text-sm opacity-80">Evaluate your current athletic performance and potential</p>
+                    <h3 className="mb-2">{t('index.quiz.athleticAssessment')}</h3>
+                    <p className="text-sm opacity-80">{t('index.quiz.athleticDesc')}</p>
                   </div>
                   <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-lg p-6">
                     <BookOpen className="w-12 h-12 text-accent mx-auto mb-4" />
-                    <h3 className="mb-2">Academic Readiness</h3>
-                    <p className="text-sm opacity-80">Review your academic standing and college requirements</p>
+                    <h3 className="mb-2">{t('index.quiz.academicReadiness')}</h3>
+                    <p className="text-sm opacity-80">{t('index.quiz.academicDesc')}</p>
                   </div>
                 </div>
-                <Button className="btn-gold text-lg px-8 py-4">Take Free Assessment</Button>
+                <Button className="btn-gold text-lg px-8 py-4">{t('btn.takeAssessment')}</Button>
               </div>
             </div>
           </section>
@@ -255,10 +247,9 @@ const Index = () => {
             <div className="container mx-auto px-6">
               <div className="max-w-6xl mx-auto">
                 <div className="text-center mb-12">
-                  <h2 className="mb-6 text-primary">Success Stories</h2>
+                  <h2 className="mb-6 text-primary">{t('home.success.title')}</h2>
                   <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                    Real students, real results. See how the Game 12 system has transformed 
-                    athletic dreams into college reality.
+                    {t('home.success.subtitle')}
                   </p>
                 </div>
 
@@ -269,15 +260,14 @@ const Index = () => {
                         <div className="w-16 h-16 bg-gradient-to-br from-accent to-accent-muted rounded-full mx-auto mb-4 flex items-center justify-center">
                           <span className="text-2xl font-bold text-accent-foreground">A</span>
                         </div>
-                        <h4 className="font-semibold text-primary">Alex Rodriguez</h4>
-                        <p className="text-sm text-muted-foreground">Soccer • Stanford University</p>
+                        <h4 className="font-semibold text-primary">{t('index.stories.alex.name')}</h4>
+                        <p className="text-sm text-muted-foreground">{t('index.stories.alex.sport')}</p>
                       </div>
                       <p className="text-muted-foreground text-sm mb-4">
-                        "Thomas's guidance transformed my recruiting journey. From no offers 
-                        to a full scholarship at my dream school!"
+                        "{t('index.stories.alex.quote')}"
                       </p>
                       <div className="text-center">
-                        <span className="text-accent font-semibold">Full Scholarship</span>
+                        <span className="text-accent font-semibold">{t('index.stories.alex.result')}</span>
                       </div>
                     </CardContent>
                   </Card>
@@ -288,15 +278,14 @@ const Index = () => {
                         <div className="w-16 h-16 bg-gradient-to-br from-accent to-accent-muted rounded-full mx-auto mb-4 flex items-center justify-center">
                           <span className="text-2xl font-bold text-accent-foreground">M</span>
                         </div>
-                        <h4 className="font-semibold text-primary">Maya Johnson</h4>
-                        <p className="text-sm text-muted-foreground">Basketball • Duke University</p>
+                        <h4 className="font-semibold text-primary">{t('index.stories.maya.name')}</h4>
+                        <p className="text-sm text-muted-foreground">{t('index.stories.maya.sport')}</p>
                       </div>
                       <p className="text-muted-foreground text-sm mb-4">
-                        "The early start strategy changed everything. By junior year, 
-                        I had multiple offers from top programs."
+                        "{t('index.stories.maya.quote')}"
                       </p>
                       <div className="text-center">
-                        <span className="text-accent font-semibold">D1 Scholarship</span>
+                        <span className="text-accent font-semibold">{t('index.stories.maya.result')}</span>
                       </div>
                     </CardContent>
                   </Card>
@@ -307,22 +296,21 @@ const Index = () => {
                         <div className="w-16 h-16 bg-gradient-to-br from-accent to-accent-muted rounded-full mx-auto mb-4 flex items-center justify-center">
                           <span className="text-2xl font-bold text-accent-foreground">J</span>
                         </div>
-                        <h4 className="font-semibold text-primary">Jordan Williams</h4>
-                        <p className="text-sm text-muted-foreground">Track & Field • UCLA</p>
+                        <h4 className="font-semibold text-primary">{t('index.stories.jordan.name')}</h4>
+                        <p className="text-sm text-muted-foreground">{t('index.stories.jordan.sport')}</p>
                       </div>
                       <p className="text-muted-foreground text-sm mb-4">
-                        "The Game 12 principles gave me confidence and a clear path. 
-                        Now I'm living my dream at UCLA!"
+                        "{t('index.stories.jordan.quote')}"
                       </p>
                       <div className="text-center">
-                        <span className="text-accent font-semibold">Partial Scholarship</span>
+                        <span className="text-accent font-semibold">{t('index.stories.jordan.result')}</span>
                       </div>
                     </CardContent>
                   </Card>
                 </div>
 
                 <div className="text-center mt-12">
-                  <Button className="btn-hero">See All Success Stories</Button>
+                  <Button className="btn-hero">{t('btn.seeAllStories')}</Button>
                 </div>
               </div>
             </div>
@@ -332,14 +320,13 @@ const Index = () => {
           <section className="py-16 bg-muted">
             <div className="container mx-auto px-6">
               <div className="max-w-4xl mx-auto text-center">
-                <h2 className="mb-6 text-primary">Ready to Transform Your Future?</h2>
+                <h2 className="mb-6 text-primary">{t('home.cta.title')}</h2>
                 <p className="text-xl text-muted-foreground mb-8">
-                  Don't leave your college dreams to chance. Join the thousands of student-athletes 
-                  who have used the Game 12 system to secure their athletic and academic future.
+                  {t('home.cta.subtitle')}
                 </p>
                 <div className="space-y-4 sm:space-y-0 sm:space-x-4 sm:flex sm:justify-center">
-                  <Button className="btn-hero text-lg px-8 py-4">Apply for Mentorship</Button>
-                  <Button className="btn-outline text-lg px-8 py-4">Schedule Free Consultation</Button>
+                  <Button className="btn-hero text-lg px-8 py-4">{t('btn.applyMentorship')}</Button>
+                  <Button className="btn-outline text-lg px-8 py-4">{t('btn.scheduleConsultation')}</Button>
                 </div>
               </div>
             </div>

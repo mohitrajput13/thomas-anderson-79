@@ -1,32 +1,33 @@
 import { useState } from "react";
 import { Play } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const GameTwelveTimeline = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const { t } = useTranslation();
 
   const principles = [
-    { id: 1, title: "Your Only Rival is Yourself", description: "Building unshakeable self-confidence and personal accountability", position: "left" },
-    { id: 2, title: "Support from the Stands", description: "The crucial role of family support in recruiting success", position: "right" },
-    { id: 3, title: "The Clock of Success Starts Early", description: "Why freshman year planning changes everything", position: "left" },
-    { id: 4, title: "Every Great Goal Begins with a Plan", description: "Strategic planning methodology for recruiting success", position: "right" },
-    { id: 5, title: "Build Your Dream Team", description: "Assembling your support network of coaches and mentors", position: "left" },
-    { id: 6, title: "Invest in Professional Recruiting Guidance", description: "The value of expert guidance in the recruiting process", position: "right" },
-    { id: 7, title: "Academic Excellence Powers Recruiting", description: "How grades and test scores open scholarship doors", position: "left" },
-    { id: 8, title: "College Success Requires a Complete Game", description: "Balancing athletics, academics, and personal development", position: "right" },
-    { id: 9, title: "Discover Your X-Factor", description: "Identifying and showcasing your unique athletic talents", position: "left" },
-    { id: 10, title: "Design Your University List Strategically", description: "Creating a targeted list of colleges that fit your goals", position: "right" },
-    { id: 11, title: "No Second Chances for First Impressions", description: "Mastering communication with college coaches", position: "left" },
-    { id: 12, title: "Step on Campus: Go Beyond the Brochure", description: "Making the most of college visits and evaluations", position: "right" }
+    { id: 1, title: t('game12.principle1.title'), description: t('game12.principle1.desc'), position: "left" },
+    { id: 2, title: t('game12.principle2.title'), description: t('game12.principle2.desc'), position: "right" },
+    { id: 3, title: t('game12.principle3.title'), description: t('game12.principle3.desc'), position: "left" },
+    { id: 4, title: t('game12.principle4.title'), description: t('game12.principle4.desc'), position: "right" },
+    { id: 5, title: t('game12.principle5.title'), description: t('game12.principle5.desc'), position: "left" },
+    { id: 6, title: t('game12.principle6.title'), description: t('game12.principle6.desc'), position: "right" },
+    { id: 7, title: t('game12.principle7.title'), description: t('game12.principle7.desc'), position: "left" },
+    { id: 8, title: t('game12.principle8.title'), description: t('game12.principle8.desc'), position: "right" },
+    { id: 9, title: t('game12.principle9.title'), description: t('game12.principle9.desc'), position: "left" },
+    { id: 10, title: t('game12.principle10.title'), description: t('game12.principle10.desc'), position: "right" },
+    { id: 11, title: t('game12.principle11.title'), description: t('game12.principle11.desc'), position: "left" },
+    { id: 12, title: t('game12.principle12.title'), description: t('game12.principle12.desc'), position: "right" }
   ];
 
   return (
     <section className="py-20 bg-gradient-to-b from-muted to-background">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="text-center mb-16">
-          <h2 className="mb-6 text-primary">The Game 12 Principles</h2>
+          <h2 className="mb-6 text-primary">{t('game12.title')}</h2>
           <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
-            Discover the 12 fundamental principles that form the foundation of successful 
-            college recruiting. Hover over each principle to learn more.
+            {t('game12.subtitle')}
           </p>
         </div>
 
@@ -62,9 +63,9 @@ const GameTwelveTimeline = () => {
                     }`}>
                       <div className="flex items-center justify-center gap-3 text-primary-foreground">
                         <Play className="w-6 h-6" />
-                        <span className="font-semibold">Watch Thomas Explain</span>
+                        <span className="font-semibold">{t('game12.watchThomas')}</span>
                       </div>
-                      <p className="text-sm text-primary-foreground/80 mt-2">Video coming soon</p>
+                      <p className="text-sm text-primary-foreground/80 mt-2">{t('game12.videoComingSoon')}</p>
                     </div>
                   </div>
                 </div>
@@ -88,11 +89,11 @@ const GameTwelveTimeline = () => {
         {/* Call to Action */}
         <div className="text-center mt-16">
           <p className="text-muted-foreground mb-6">
-            These principles have guided thousands of student-athletes to college success.
+            {t('game12.cta.subtitle')}
           </p>
           <div className="space-y-4 sm:space-y-0 sm:space-x-4 sm:flex sm:justify-center">
-            <button className="btn-hero">Get the Complete System</button>
-            <button className="btn-outline">Download Free Guide</button>
+            <button className="btn-hero">{t('game12.cta.getSystem')}</button>
+            <button className="btn-outline">{t('game12.cta.downloadGuide')}</button>
           </div>
         </div>
       </div>

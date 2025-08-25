@@ -32,18 +32,13 @@ const About = () => {
           <section className="py-16">
             <div className="container mx-auto px-6">
               <div className="max-w-4xl mx-auto">
-                <h2 className="text-center mb-12 text-primary">My Story & Mission</h2>
+                <h2 className="text-center mb-12 text-primary">{t('about.story.title')}</h2>
                 <div className="prose prose-lg mx-auto text-muted-foreground">
                   <p>
-                    My passion for college recruiting began when I witnessed firsthand how proper 
-                    guidance could transform a young athlete's future. What started as helping a 
-                    few local players has evolved into a comprehensive system that has helped 
-                    thousands of student-athletes achieve their college dreams.
+                    {t('about.story.p1')}
                   </p>
                   <p>
-                    Over 31 years, I've seen the recruiting landscape evolve dramatically. Through 
-                    every change, one truth remains constant: early preparation and strategic 
-                    planning are the keys to success.
+                    {t('about.story.p2')}
                   </p>
                 </div>
               </div>
@@ -53,7 +48,7 @@ const About = () => {
           {/* Career Timeline */}
           <section className="py-16 bg-muted">
             <div className="container mx-auto px-6">
-              <h2 className="text-center mb-12 text-primary">Career Timeline</h2>
+              <h2 className="text-center mb-12 text-primary">{t('about.timeline.title')}</h2>
               <div className="max-w-4xl mx-auto">
                 <div className="space-y-8">
                   <div className="timeline-item">

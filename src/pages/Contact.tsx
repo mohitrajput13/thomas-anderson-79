@@ -5,8 +5,10 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Phone, Mail, MapPin, Clock, HelpCircle } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const Contact = () => {
+  const { t } = useTranslation();
   return (
     <>
       <Helmet>
@@ -22,10 +24,9 @@ const Contact = () => {
           <section className="py-20 bg-gradient-to-b from-primary to-primary-glow text-primary-foreground">
             <div className="container mx-auto px-6">
               <div className="max-w-4xl mx-auto text-center">
-                <h1 className="mb-6 animate-fade-in">Get In Touch</h1>
+                <h1 className="mb-6 animate-fade-in">{t('contact.hero.title')}</h1>
                 <p className="text-xl leading-relaxed animate-slide-up">
-                  Ready to transform your college recruiting journey? Let's connect and 
-                  discuss how we can help you achieve your athletic and academic dreams.
+                  {t('contact.hero.subtitle')}
                 </p>
               </div>
             </div>
