@@ -58,17 +58,24 @@ const Navigation = () => {
     // Use the global function we defined in the HTML
     if (window.changeLanguage) {
       window.changeLanguage(lang);
-      setCurrentLang(lang);
     } else {
-      // Fallback method
+      // Widget not ready, wait and try again
       setTimeout(() => {
-        const selectElement = document.querySelector('.goog-te-combo') as HTMLSelectElement;
-        if (selectElement) {
-          selectElement.value = lang;
-          selectElement.dispatchEvent(new Event('change'));
-          setCurrentLang(lang);
+        if (window.changeLanguage) {
+          window.changeLanguage(lang);
+        } else {
+          // Direct fallback method
+          const selectElement = document.querySelector('.goog-te-combo') as HTMLSelectElement;
+          if (selectElement) {
+            if (lang === 'en') {
+              selectElement.value = '';
+            } else {
+              selectElement.value = lang;
+            }
+            selectElement.dispatchEvent(new Event('change'));
+          }
         }
-      }, 500);
+      }, 1000);
     }
   };
 
