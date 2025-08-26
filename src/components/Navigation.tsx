@@ -55,27 +55,17 @@ const Navigation = () => {
   }, []);
 
   const translateToLanguage = (lang: string) => {
-    // Use the global function we defined in the HTML
     if (window.changeLanguage) {
       window.changeLanguage(lang);
+      setCurrentLang(lang);
     } else {
-      // Widget not ready, wait and try again
+      // Wait for Google Translate to load
       setTimeout(() => {
         if (window.changeLanguage) {
           window.changeLanguage(lang);
-        } else {
-          // Direct fallback method
-          const selectElement = document.querySelector('.goog-te-combo') as HTMLSelectElement;
-          if (selectElement) {
-            if (lang === 'en') {
-              selectElement.value = '';
-            } else {
-              selectElement.value = lang;
-            }
-            selectElement.dispatchEvent(new Event('change'));
-          }
+          setCurrentLang(lang);
         }
-      }, 1000);
+      }, 2000);
     }
   };
 
