@@ -55,17 +55,28 @@ const Navigation = () => {
   }, []);
 
   const translateToLanguage = (lang: string) => {
+    console.log('Button clicked for language:', lang);
+    setCurrentLang(lang);
+    
     if (window.changeLanguage) {
       window.changeLanguage(lang);
-      setCurrentLang(lang);
     } else {
+      console.log('changeLanguage function not available, waiting...');
       // Wait for Google Translate to load
-      setTimeout(() => {
+      let attempts = 0;
+      const checkAndTranslate = () => {
+        attempts++;
         if (window.changeLanguage) {
+          console.log('Found changeLanguage function on attempt:', attempts);
           window.changeLanguage(lang);
-          setCurrentLang(lang);
+        } else if (attempts < 10) {
+          console.log('Attempt', attempts, 'failed, retrying...');
+          setTimeout(checkAndTranslate, 1000);
+        } else {
+          console.log('Failed to find changeLanguage function after 10 attempts');
         }
-      }, 2000);
+      };
+      checkAndTranslate();
     }
   };
 

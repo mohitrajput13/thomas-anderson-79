@@ -27,28 +27,65 @@
         layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
         autoDisplay: false
       }, 'google_translate_element');
+      
+      // Initialize global change function after widget creation
+      setTimeout(function() {
+        window.googleTranslateReady = true;
+        console.log('Google Translate initialized');
+      }, 1000);
     }
     
-    // Wait for translate element to be ready
-    function waitForTranslateElement(callback) {
-      const checkExist = setInterval(function() {
-        const combo = document.querySelector('.goog-te-combo');
-        if (combo) {
-          clearInterval(checkExist);
-          callback();
+    // Enhanced language change function
+    window.changeLanguage = function(targetLang) {
+      console.log('Attempting to change language to:', targetLang);
+      
+      function attemptTranslation() {
+        var selectElement = document.querySelector('.goog-te-combo');
+        console.log('Found select element:', selectElement);
+        
+        if (selectElement) {
+          var currentValue = selectElement.value;
+          console.log('Current select value:', currentValue);
+          
+          if (targetLang === 'en') {
+            selectElement.value = '';
+          } else if (targetLang === 'es') {
+            selectElement.value = 'es';
+          }
+          
+          console.log('Setting select value to:', selectElement.value);
+          
+          // Trigger change event
+          var event = new Event('change', { bubbles: true });
+          selectElement.dispatchEvent(event);
+          
+          // Also try other event types
+          selectElement.dispatchEvent(new Event('input', { bubbles: true }));
+          selectElement.dispatchEvent(new Event('click', { bubbles: true }));
+          
+          return true;
         }
-      }, 100);
-    }
-    
-    // Global function to change language
-    window.changeLanguage = function(lang) {
-      waitForTranslateElement(function() {
-        const combo = document.querySelector('.goog-te-combo');
-        if (combo) {
-          combo.value = lang === 'en' ? '' : lang;
-          combo.dispatchEvent(new Event('change'));
+        return false;
+      }
+      
+      // Try immediately
+      if (attemptTranslation()) {
+        return;
+      }
+      
+      // If not available, wait and retry
+      var retryCount = 0;
+      var retryInterval = setInterval(function() {
+        retryCount++;
+        console.log('Retry attempt:', retryCount);
+        
+        if (attemptTranslation() || retryCount > 20) {
+          clearInterval(retryInterval);
+          if (retryCount > 20) {
+            console.log('Failed to find Google Translate after 20 attempts');
+          }
         }
-      });
+      }, 500);
     };
   </script>
   <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
