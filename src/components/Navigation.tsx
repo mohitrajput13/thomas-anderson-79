@@ -16,30 +16,59 @@ const Navigation = () => {
   ];
 
   useEffect(() => {
-    // Listen for Google Translate changes
-    const observer = new MutationObserver(() => {
-      const select = document.querySelector('.goog-te-combo') as HTMLSelectElement;
-      if (select) {
-        const value = select.value;
-        setCurrentLang(value === 'es' ? 'es' : 'en');
+    // Check current language on mount and when DOM changes
+    const checkCurrentLanguage = () => {
+      const iframe = document.querySelector('iframe.goog-te-banner-frame');
+      const body = document.body;
+      
+      if (body && body.classList.contains('translated-ltr')) {
+        // Check for Spanish translation
+        if (window.location.hash.includes('#es/') || 
+            document.documentElement.lang === 'es' ||
+            body.className.includes('translated-')) {
+          setCurrentLang('es');
+        }
+      } else {
+        setCurrentLang('en');
       }
-    });
+    };
 
+    // Initial check
+    checkCurrentLanguage();
+
+    // Listen for changes
+    const observer = new MutationObserver(checkCurrentLanguage);
     observer.observe(document.body, {
+      attributes: true,
+      attributeFilter: ['class'],
       childList: true,
-      subtree: true,
-      attributes: true
+      subtree: true
     });
 
-    return () => observer.disconnect();
+    // Also listen for hash changes (Google Translate uses URL hash)
+    window.addEventListener('hashchange', checkCurrentLanguage);
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener('hashchange', checkCurrentLanguage);
+    };
   }, []);
 
   const translateToLanguage = (lang: string) => {
-    const select = document.querySelector('.goog-te-combo') as HTMLSelectElement;
-    if (select) {
-      select.value = lang;
-      select.dispatchEvent(new Event('change'));
+    // Use the global function we defined in the HTML
+    if (window.changeLanguage) {
+      window.changeLanguage(lang);
       setCurrentLang(lang);
+    } else {
+      // Fallback method
+      setTimeout(() => {
+        const selectElement = document.querySelector('.goog-te-combo') as HTMLSelectElement;
+        if (selectElement) {
+          selectElement.value = lang;
+          selectElement.dispatchEvent(new Event('change'));
+          setCurrentLang(lang);
+        }
+      }, 500);
     }
   };
 
