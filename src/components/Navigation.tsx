@@ -1,22 +1,46 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Globe } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [currentLang, setCurrentLang] = useState('en');
   const location = useLocation();
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   const navItems = [
     { name: t('nav.learningHub'), href: "/media" },
     { name: t('nav.aboutThomas'), href: "/about" },
   ];
 
-  const toggleLanguage = () => {
-    const newLang = i18n.language === 'en' ? 'es' : 'en';
-    i18n.changeLanguage(newLang);
+  useEffect(() => {
+    // Listen for Google Translate changes
+    const observer = new MutationObserver(() => {
+      const select = document.querySelector('.goog-te-combo') as HTMLSelectElement;
+      if (select) {
+        const value = select.value;
+        setCurrentLang(value === 'es' ? 'es' : 'en');
+      }
+    });
+
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true,
+      attributes: true
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
+  const translateToLanguage = (lang: string) => {
+    const select = document.querySelector('.goog-te-combo') as HTMLSelectElement;
+    if (select) {
+      select.value = lang;
+      select.dispatchEvent(new Event('change'));
+      setCurrentLang(lang);
+    }
   };
 
   const isActive = (href: string) => {
@@ -59,14 +83,29 @@ const Navigation = () => {
               </Link>
             ))}
             
-            {/* Language Toggle */}
-            <button
-              onClick={toggleLanguage}
-              className="flex items-center gap-1 px-3 py-1 rounded-lg border border-border hover:bg-muted transition-colors text-sm font-medium"
-            >
-              <Globe className="w-4 h-4" />
-              {i18n.language.toUpperCase()}
-            </button>
+            {/* Google Translate Language Buttons */}
+            <div className="flex items-center gap-2">
+              <button
+                onClick={() => translateToLanguage('en')}
+                className={`px-3 py-1 rounded-lg border transition-colors text-sm font-medium ${
+                  currentLang === 'en'
+                    ? 'bg-primary text-primary-foreground border-primary'
+                    : 'border-border hover:bg-muted'
+                }`}
+              >
+                EN
+              </button>
+              <button
+                onClick={() => translateToLanguage('es')}
+                className={`px-3 py-1 rounded-lg border transition-colors text-sm font-medium ${
+                  currentLang === 'es'
+                    ? 'bg-primary text-primary-foreground border-primary'
+                    : 'border-border hover:bg-muted'
+                }`}
+              >
+                ES
+              </button>
+            </div>
             
             <Button className="btn-gold">{t('nav.getGuide')}</Button>
           </div>
@@ -103,14 +142,29 @@ const Navigation = () => {
                 </Link>
               ))}
               
-              {/* Mobile Language Toggle */}
-              <button
-                onClick={toggleLanguage}
-                className="flex items-center gap-2 px-4 py-2 rounded-lg border border-border hover:bg-muted transition-colors text-sm font-medium mx-4"
-              >
-                <Globe className="w-4 h-4" />
-                {i18n.language === 'en' ? 'Español' : 'English'}
-              </button>
+              {/* Mobile Google Translate Language Buttons */}
+              <div className="flex items-center gap-2 mx-4">
+                <button
+                  onClick={() => translateToLanguage('en')}
+                  className={`px-3 py-2 rounded-lg border transition-colors text-sm font-medium flex-1 ${
+                    currentLang === 'en'
+                      ? 'bg-primary text-primary-foreground border-primary'
+                      : 'border-border hover:bg-muted'
+                  }`}
+                >
+                  English
+                </button>
+                <button
+                  onClick={() => translateToLanguage('es')}
+                  className={`px-3 py-2 rounded-lg border transition-colors text-sm font-medium flex-1 ${
+                    currentLang === 'es'
+                      ? 'bg-primary text-primary-foreground border-primary'
+                      : 'border-border hover:bg-muted'
+                  }`}
+                >
+                  Español
+                </button>
+              </div>
               
               <Button className="btn-gold mx-4 mt-4">{t('nav.getGuide')}</Button>
             </div>
