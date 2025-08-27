@@ -10,8 +10,8 @@ const Media = () => {
   return (
     <>
       <Helmet>
-        <title>{t('media.hero.title')} | Thomas Anderson</title>
-        <meta name="description" content={t('media.hero.subtitle')} />
+        <title>College Recruiting Resources | Podcast, Videos & Articles</title>
+        <meta name="description" content="Complete learning hub for college recruiting. Podcast episodes, expert videos, articles, and speaking insights to help families navigate early preparation successfully." />
       </Helmet>
       
       <div className="min-h-screen bg-background">
@@ -22,20 +22,18 @@ const Media = () => {
           <section className="py-20 bg-gradient-to-b from-primary to-primary-glow text-primary-foreground">
             <div className="container mx-auto px-6">
               <div className="max-w-4xl mx-auto text-center">
-                <h1 className="mb-6 animate-fade-in">{t('media.hero.title')}</h1>
+                <h1 className="mb-6 animate-fade-in">Your Complete Learning Hub</h1>
                 <p className="text-xl leading-relaxed animate-slide-up">
-                  {t('media.hero.subtitle')}
+                  Raw, unfiltered content on college recruiting. No scripts, no fluff—just honest insights from 31 years of experience.
                 </p>
               </div>
             </div>
           </section>
 
-          {/* Media Sections Grid */}
+          {/* Podcast Section */}
           <section className="py-16">
             <div className="container mx-auto px-6">
-              <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
-                
-                {/* Podcast Section */}
+              <div className="max-w-6xl mx-auto">
                 <div className="card-elegant hover-lift">
                   <div className="flex items-center gap-4 mb-6">
                     <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center">
@@ -44,28 +42,21 @@ const Media = () => {
                     <h2 className="text-primary">Recruiting Unplugged</h2>
                   </div>
                   <p className="text-muted-foreground mb-6">
-                    Weekly podcast featuring real recruiting stories, expert interviews, 
-                    and actionable advice for student-athletes and parents navigating 
-                    the college recruiting process.
+                    Raw, behind-the-scenes conversations about what really works in college recruiting. No scripts, no fluff—just honest insights from families, athletes, and coaches.
                   </p>
-                  <div className="space-y-3 mb-6">
-                    <div className="p-3 bg-muted rounded-lg">
-                      <h4 className="font-semibold text-primary">Latest Episode</h4>
-                      <p className="text-sm text-muted-foreground">
-                        "The Early Bird Advantage: Why 9th Grade Planning Changes Everything"
-                      </p>
-                    </div>
-                    <div className="p-3 bg-muted rounded-lg">
-                      <h4 className="font-semibold text-primary">Popular Episode</h4>
-                      <p className="text-sm text-muted-foreground">
-                        "Scholarship Myths: What Coaches Really Look For"
-                      </p>
-                    </div>
-                  </div>
-                  <Button className="btn-gold w-full">Listen to Podcast</Button>
+                  <p className="text-muted-foreground mb-6">
+                    Featuring exclusive feedback from leading college coaches and admissions officers from 16 of the nation's top universities.
+                  </p>
+                  <Button className="btn-gold">Get the Raw Truth</Button>
                 </div>
+              </div>
+            </div>
+          </section>
 
-                {/* Blog Section */}
+          {/* Blog Section */}
+          <section className="py-16 bg-muted">
+            <div className="container mx-auto px-6">
+              <div className="max-w-6xl mx-auto">
                 <div className="card-elegant hover-lift">
                   <div className="flex items-center gap-4 mb-6">
                     <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center">
@@ -73,85 +64,82 @@ const Media = () => {
                     </div>
                     <h2 className="text-primary">Off the Record</h2>
                   </div>
-                  <p className="text-muted-foreground mb-6">
-                    In-depth articles covering recruiting strategies, college selection, 
-                    academic preparation, and insider insights from three decades of 
-                    experience in college athletics.
+                  <p className="text-muted-foreground mb-4 font-semibold">
+                    Honest Takes. Real Insights. No Filters.
                   </p>
-                  <div className="space-y-3 mb-6">
-                    <div className="p-3 bg-muted rounded-lg">
-                      <h4 className="font-semibold text-primary">Recent Article</h4>
-                      <p className="text-sm text-muted-foreground">
-                        "The Hidden Cost of Last-Minute Recruiting"
-                      </p>
-                    </div>
-                    <div className="p-3 bg-muted rounded-lg">
-                      <h4 className="font-semibold text-primary">Featured Article</h4>
-                      <p className="text-sm text-muted-foreground">
-                        "Building Your Dream Team: The Power of Professional Guidance"
-                      </p>
-                    </div>
-                  </div>
-                  <Button className="btn-gold w-full">Read Articles</Button>
+                  <p className="text-muted-foreground mb-6">
+                    Welcome to Off the Record, a written space where I share unfiltered perspectives on college recruiting, student-athlete development, admissions trends, and the evolving landscape of college sports.
+                  </p>
+                  <p className="text-muted-foreground mb-6">
+                    Here, you'll find articles, reflections, and thought pieces that go beyond the surface, informed by decades of experience, shaped by real conversations, and focused on what truly matters to families, athletes, and educators.
+                  </p>
+                  <p className="text-muted-foreground mb-6">
+                    Whether you're a parent navigating the process, a student-athlete looking for direction, or a professional in the field, this is where we talk about what's really happening—off the record.
+                  </p>
+                  <Button className="btn-gold">Read Latest Articles</Button>
                 </div>
+              </div>
+            </div>
+          </section>
 
-                {/* Video Training */}
-                <div className="card-elegant hover-lift">
-                  <div className="flex items-center gap-4 mb-6">
-                    <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center">
-                      <Video className="w-6 h-6 text-accent-foreground" />
-                    </div>
-                    <h2 className="text-primary">Video Training Series</h2>
+          {/* Conferences and Events Section */}
+          <section className="py-16">
+            <div className="container mx-auto px-6">
+              <div className="max-w-6xl mx-auto">
+                <h2 className="text-center mb-12 text-primary">Speaking Engagements & Conferences</h2>
+                <p className="text-center text-xl text-muted-foreground mb-12 max-w-3xl mx-auto">
+                  I share insights on recruiting strategy and early preparation at key industry events, helping families understand what really works in today's landscape.
+                </p>
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div className="card-elegant">
+                    <h3 className="mb-4 text-primary">Upcoming Event</h3>
+                    <p className="text-muted-foreground mb-4">
+                      "Early Recruiting Success" - High School Athletic Director Conference
+                    </p>
+                    <Button className="btn-outline w-full">See Event Details</Button>
                   </div>
-                  <p className="text-muted-foreground mb-6">
-                    Comprehensive video courses covering every aspect of college recruiting, 
-                    from initial planning through scholarship negotiation and beyond.
-                  </p>
-                  <div className="space-y-3 mb-6">
-                    <div className="p-3 bg-muted rounded-lg">
-                      <h4 className="font-semibold text-primary">Free Series</h4>
-                      <p className="text-sm text-muted-foreground">
-                        "The Game 12 Principles" - 12 essential recruiting concepts
-                      </p>
-                    </div>
-                    <div className="p-3 bg-muted rounded-lg">
-                      <h4 className="font-semibold text-primary">Premium Course</h4>
-                      <p className="text-sm text-muted-foreground">
-                        "Recruiting Mastery Blueprint" - Complete step-by-step system
-                      </p>
-                    </div>
+                  <div className="card-elegant">
+                    <h3 className="mb-4 text-primary">Popular Topic</h3>
+                    <p className="text-muted-foreground mb-4">
+                      "Parent's Guide to Supporting Their Student-Athlete"
+                    </p>
+                    <Button className="btn-outline w-full">See Event Details</Button>
                   </div>
-                  <Button className="btn-gold w-full">Watch Videos</Button>
                 </div>
+              </div>
+            </div>
+          </section>
 
-                {/* Speaking Engagements */}
-                <div className="card-elegant hover-lift">
-                  <div className="flex items-center gap-4 mb-6">
-                    <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center">
-                      <Calendar className="w-6 h-6 text-accent-foreground" />
-                    </div>
-                    <h2 className="text-primary">Speaking Engagements</h2>
+          {/* Videos Section */}
+          <section className="py-16 bg-muted">
+            <div className="container mx-auto px-6">
+              <div className="max-w-6xl mx-auto">
+                <h2 className="text-center mb-12 text-primary">The Game 12 Training Series</h2>
+                <p className="text-center text-xl text-muted-foreground mb-12 max-w-3xl mx-auto">
+                  Focused lessons that teach each of the 12 principles in detail. Perfect for busy families who want to learn the method efficiently.
+                </p>
+                <div className="grid md:grid-cols-3 gap-8">
+                  <div className="card-elegant">
+                    <h3 className="mb-4 text-primary">Principle #1: Your Only Rival is Yourself</h3>
+                    <p className="text-sm text-muted-foreground mb-4">
+                      Building unshakeable self-confidence and focus
+                    </p>
+                    <Button className="btn-outline w-full">Watch Now</Button>
                   </div>
-                  <p className="text-muted-foreground mb-6">
-                    Live presentations and workshops for schools, clubs, and organizations. 
-                    Interactive sessions designed to educate athletes, parents, and coaches 
-                    on effective recruiting strategies.
-                  </p>
-                  <div className="space-y-3 mb-6">
-                    <div className="p-3 bg-muted rounded-lg">
-                      <h4 className="font-semibold text-primary">Upcoming Event</h4>
-                      <p className="text-sm text-muted-foreground">
-                        "Early Recruiting Success" - High School Athletic Director Conference
-                      </p>
-                    </div>
-                    <div className="p-3 bg-muted rounded-lg">
-                      <h4 className="font-semibold text-primary">Popular Topic</h4>
-                      <p className="text-sm text-muted-foreground">
-                        "Parent's Guide to Supporting Their Student-Athlete"
-                      </p>
-                    </div>
+                  <div className="card-elegant">
+                    <h3 className="mb-4 text-primary">Principle #3: The Clock of Success Starts Early</h3>
+                    <p className="text-sm text-muted-foreground mb-4">
+                      Why freshman year planning changes everything
+                    </p>
+                    <Button className="btn-outline w-full">Watch Now</Button>
                   </div>
-                  <Button className="btn-gold w-full">Book Speaking Event</Button>
+                  <div className="card-elegant">
+                    <h3 className="mb-4 text-primary">Principle #7: Academic Excellence Powers Recruiting</h3>
+                    <p className="text-sm text-muted-foreground mb-4">
+                      How grades open doors that talent alone cannot
+                    </p>
+                    <Button className="btn-outline w-full">Watch Now</Button>
+                  </div>
                 </div>
               </div>
             </div>

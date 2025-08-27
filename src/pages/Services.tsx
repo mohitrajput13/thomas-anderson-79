@@ -10,8 +10,8 @@ const Services = () => {
   return (
     <>
       <Helmet>
-        <title>{t('services.hero.title')} | Thomas Anderson</title>
-        <meta name="description" content={t('services.hero.subtitle')} />
+        <title>Personal Recruiting Guidance | When You Need Extra Support</title>
+        <meta name="description" content="For families wanting personalized support beyond our free resources. Limited one-on-one guidance for early recruiting preparation with Thomas Anderson." />
       </Helmet>
       
       <div className="min-h-screen bg-background">
@@ -22,143 +22,100 @@ const Services = () => {
           <section className="py-20 bg-gradient-to-b from-primary to-primary-glow text-primary-foreground">
             <div className="container mx-auto px-6">
               <div className="max-w-4xl mx-auto text-center">
-                <h1 className="mb-6 animate-fade-in">{t('services.hero.title')}</h1>
+                <h1 className="mb-6 animate-fade-in">Personal Recruiting Guidance for Early Preparation</h1>
                 <p className="text-xl leading-relaxed animate-slide-up">
-                  {t('services.hero.subtitle')}
+                  Most parents begin with our free resources. When you want tailored, one-on-one guidance for your athlete's unique path, my Pre-Recruiting Mentorship program is available for a limited number of families each year.
                 </p>
-                <div className="mt-8">
-                  <span className="inline-block bg-accent text-accent-foreground px-4 py-2 rounded-full font-semibold">
-                    {t('services.hero.limited')}
-                  </span>
-                </div>
               </div>
             </div>
           </section>
 
-          {/* 3-Stage Process */}
+          {/* Sports Recruiting Process Section */}
           <section className="py-16">
             <div className="container mx-auto px-6">
-              <h2 className="text-center mb-12 text-primary">Our 3-Stage Success Process</h2>
-              <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+              <h2 className="text-center mb-12 text-primary">How Personal Guidance Works</h2>
+              <p className="text-center text-xl text-muted-foreground mb-12 max-w-3xl mx-auto">
+                The process is divided into clear, strategic stages—each guided directly by me to ensure personalized planning and real progress.
+              </p>
+              <div className="max-w-6xl mx-auto space-y-8">
                 
-                <div className="card-elegant text-center hover-lift">
-                  <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-6">
-                    <Users className="w-8 h-8 text-accent-foreground" />
+                <div className="card-elegant">
+                  <div className="flex items-start gap-6">
+                    <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center flex-shrink-0">
+                      <span className="text-2xl font-bold text-accent-foreground">1</span>
+                    </div>
+                    <div>
+                      <h3 className="mb-4 text-primary">Stage 1: Foundation</h3>
+                      <p className="text-muted-foreground mb-4">
+                        Building self-awareness, mindset, and academic-athletic direction. We develop a winning mindset, set personal and athletic goals, and help you understand what colleges are looking for while creating your recruitment timeline.
+                      </p>
+                    </div>
                   </div>
-                  <h3 className="mb-4 text-primary">Stage 1: Assessment</h3>
-                  <ul className="text-left space-y-2 text-muted-foreground">
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-5 h-5 text-success mt-0.5 flex-shrink-0" />
-                      Complete athletic and academic evaluation
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-5 h-5 text-success mt-0.5 flex-shrink-0" />
-                      Goal setting and timeline development
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-5 h-5 text-success mt-0.5 flex-shrink-0" />
-                      Recruiting readiness analysis
-                    </li>
-                  </ul>
                 </div>
 
-                <div className="card-elegant text-center hover-lift">
-                  <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-6">
-                    <Calendar className="w-8 h-8 text-accent-foreground" />
+                <div className="card-elegant">
+                  <div className="flex items-start gap-6">
+                    <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center flex-shrink-0">
+                      <span className="text-2xl font-bold text-accent-foreground">2</span>
+                    </div>
+                    <div>
+                      <h3 className="mb-4 text-primary">Stage 2: Preparation</h3>
+                      <p className="text-muted-foreground mb-4">
+                        Building a strong student-athlete profile. We focus on academic performance optimization, strategic extracurricular activities and leadership development, plus strategic college selection.
+                      </p>
+                    </div>
                   </div>
-                  <h3 className="mb-4 text-primary">Stage 2: Strategy</h3>
-                  <ul className="text-left space-y-2 text-muted-foreground">
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-5 h-5 text-success mt-0.5 flex-shrink-0" />
-                      Personalized recruiting plan
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-5 h-5 text-success mt-0.5 flex-shrink-0" />
-                      College list development
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-5 h-5 text-success mt-0.5 flex-shrink-0" />
-                      Communication strategy design
-                    </li>
-                  </ul>
                 </div>
 
-                <div className="card-elegant text-center hover-lift">
-                  <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-6">
-                    <Trophy className="w-8 h-8 text-accent-foreground" />
+                <div className="card-elegant">
+                  <div className="flex items-start gap-6">
+                    <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center flex-shrink-0">
+                      <span className="text-2xl font-bold text-accent-foreground">3</span>
+                    </div>
+                    <div>
+                      <h3 className="mb-4 text-primary">Stage 3: Readiness</h3>
+                      <p className="text-muted-foreground mb-4">
+                        Shaping your recruiting image and communication skills. We review progress across all goals, prepare presentation materials (resume, video), evaluate your digital presence, and practice advanced coach communication strategies.
+                      </p>
+                    </div>
                   </div>
-                  <h3 className="mb-4 text-primary">Stage 3: Execution</h3>
-                  <ul className="text-left space-y-2 text-muted-foreground">
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-5 h-5 text-success mt-0.5 flex-shrink-0" />
-                      Weekly progress monitoring
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-5 h-5 text-success mt-0.5 flex-shrink-0" />
-                      Application and visit preparation
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-5 h-5 text-success mt-0.5 flex-shrink-0" />
-                      Scholarship negotiation support
-                    </li>
-                  </ul>
                 </div>
               </div>
             </div>
           </section>
 
-          {/* Program Benefits */}
+          {/* Final CTA Section */}
           <section className="py-16 bg-muted">
             <div className="container mx-auto px-6">
               <div className="max-w-4xl mx-auto text-center">
-                <h2 className="mb-12 text-primary">What Makes This Program Different</h2>
-                <div className="grid md:grid-cols-2 gap-8">
-                  <div className="text-left">
-                    <h3 className="mb-4 text-accent">Exclusive Access</h3>
-                    <p className="text-muted-foreground">
-                      Limited to just 50 families per year to ensure personalized attention 
-                      and maximum results for each student-athlete.
-                    </p>
-                  </div>
-                  <div className="text-left">
-                    <h3 className="mb-4 text-accent">Proven Results</h3>
-                    <p className="text-muted-foreground">
-                      Over 95% of our mentorship students receive scholarship offers, 
-                      with an average scholarship value 40% higher than the national average.
-                    </p>
-                  </div>
-                  <div className="text-left">
-                    <h3 className="mb-4 text-accent">Family Support</h3>
-                    <p className="text-muted-foreground">
-                      We work with the entire family unit, ensuring parents are equipped 
-                      to support their athlete throughout the recruiting process.
-                    </p>
-                  </div>
-                  <div className="text-left">
-                    <h3 className="mb-4 text-accent">Lifetime Network</h3>
-                    <p className="text-muted-foreground">
-                      Join an exclusive network of successful student-athletes and families 
-                      who continue to support each other beyond college.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* CTA Section */}
-          <section className="py-16">
-            <div className="container mx-auto px-6">
-              <div className="max-w-4xl mx-auto text-center">
-                <h2 className="mb-6 text-primary">Ready to Transform Your Future?</h2>
+                <h2 className="mb-6 text-primary">Is This Program Right for Your Family?</h2>
                 <p className="text-xl text-muted-foreground mb-8">
-                  Applications are reviewed on a first-come, first-served basis. 
-                  Don't wait to secure your spot in this exclusive program.
+                  This mentorship is designed for families who:
                 </p>
-                <div className="space-y-4 sm:space-y-0 sm:space-x-4 sm:flex sm:justify-center">
-                  <Button className="btn-hero">Apply for Mentorship</Button>
-                  <Button className="btn-outline">Schedule Consultation</Button>
+                <div className="grid md:grid-cols-3 gap-6 mb-8">
+                  <div className="card-elegant text-center">
+                    <CheckCircle className="w-8 h-8 text-success mx-auto mb-4" />
+                    <p className="text-muted-foreground">
+                      Understand the value of starting early (ages 14-16)
+                    </p>
+                  </div>
+                  <div className="card-elegant text-center">
+                    <CheckCircle className="w-8 h-8 text-success mx-auto mb-4" />
+                    <p className="text-muted-foreground">
+                      Are committed to following a structured, proven approach
+                    </p>
+                  </div>
+                  <div className="card-elegant text-center">
+                    <CheckCircle className="w-8 h-8 text-success mx-auto mb-4" />
+                    <p className="text-muted-foreground">
+                      Want personalized guidance from someone with 31 years of experience
+                    </p>
+                  </div>
                 </div>
+                <p className="text-lg text-muted-foreground mb-8">
+                  Due to the intensive nature of this program, availability is extremely limited.
+                </p>
+                <Button className="btn-hero">Learn About Availability</Button>
               </div>
             </div>
           </section>

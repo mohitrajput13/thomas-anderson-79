@@ -12,8 +12,8 @@ const Contact = () => {
   return (
     <>
       <Helmet>
-        <title>Contact Thomas Anderson - College Recruiting Expert</title>
-        <meta name="description" content="Get in touch with Thomas Anderson for college recruiting guidance, mentorship applications, speaking engagements, and personalized support." />
+        <title>Contact Thomas Anderson | Questions About College Recruiting</title>
+        <meta name="description" content="Have questions about athletic recruiting? Contact Thomas Anderson for help with resources, book inquiries, speaking events, and recruiting guidance." />
       </Helmet>
       
       <div className="min-h-screen bg-background">
@@ -24,9 +24,9 @@ const Contact = () => {
           <section className="py-20 bg-gradient-to-b from-primary to-primary-glow text-primary-foreground">
             <div className="container mx-auto px-6">
               <div className="max-w-4xl mx-auto text-center">
-                <h1 className="mb-6 animate-fade-in">{t('contact.hero.title')}</h1>
+                <h1 className="mb-6 animate-fade-in">Have Questions About College Recruiting? Contact Thomas Anderson Today</h1>
                 <p className="text-xl leading-relaxed animate-slide-up">
-                  {t('contact.hero.subtitle')}
+                  I respond personally to inquiries about my book, upcoming courses, speaking engagements, and media opportunities. For recruiting mentorship, please note that availability is extremely limited.
                 </p>
               </div>
             </div>
@@ -39,21 +39,16 @@ const Contact = () => {
                 
                 {/* Contact Form */}
                 <div className="card-elegant">
-                  <h2 className="mb-6 text-primary">Send a Message</h2>
+                  <h2 className="mb-6 text-primary">Contact and Connect With Me Directly</h2>
+                  <p className="text-muted-foreground mb-6">
+                    Fill out this short form and I'll get back to you personally as soon as possible.
+                  </p>
                   <form className="space-y-6">
-                    <div className="grid md:grid-cols-2 gap-4">
-                      <div>
-                        <label className="block text-sm font-medium text-foreground mb-2">
-                          First Name *
-                        </label>
-                        <Input placeholder="Enter your first name" />
-                      </div>
-                      <div>
-                        <label className="block text-sm font-medium text-foreground mb-2">
-                          Last Name *
-                        </label>
-                        <Input placeholder="Enter your last name" />
-                      </div>
+                    <div>
+                      <label className="block text-sm font-medium text-foreground mb-2">
+                        Name *
+                      </label>
+                      <Input placeholder="Enter your full name" />
                     </div>
                     
                     <div>
@@ -69,17 +64,31 @@ const Contact = () => {
                       </label>
                       <Input type="tel" placeholder="Enter your phone number" />
                     </div>
-                    
+
                     <div>
                       <label className="block text-sm font-medium text-foreground mb-2">
-                        Subject *
+                        Sport / Non-athlete
                       </label>
-                      <Input placeholder="What would you like to discuss?" />
+                      <Input placeholder="What sport or 'Non-athlete'" />
+                    </div>
+
+                    <div>
+                      <label className="block text-sm font-medium text-foreground mb-2">
+                        High school graduation date
+                      </label>
+                      <Input placeholder="Enter graduation year" />
+                    </div>
+
+                    <div>
+                      <label className="block text-sm font-medium text-foreground mb-2">
+                        Relationship with the athlete (optional)
+                      </label>
+                      <Input placeholder="Parent, Student, Coach, etc." />
                     </div>
                     
                     <div>
                       <label className="block text-sm font-medium text-foreground mb-2">
-                        Message *
+                        Message or specific questions *
                       </label>
                       <Textarea 
                         placeholder="Tell us about your situation, goals, and how we can help..."
@@ -94,7 +103,7 @@ const Contact = () => {
                 {/* Contact Information */}
                 <div className="space-y-8">
                   <div className="card-elegant">
-                    <h3 className="mb-6 text-primary">Contact Information</h3>
+                    <h3 className="mb-6 text-primary">Prefer to Reach Out Another Way?</h3>
                     <div className="space-y-4">
                       <div className="flex items-center gap-4">
                         <div className="w-10 h-10 bg-accent rounded-full flex items-center justify-center">
@@ -102,7 +111,7 @@ const Contact = () => {
                         </div>
                         <div>
                           <p className="font-semibold text-foreground">Phone</p>
-                          <p className="text-muted-foreground">(555) 123-4567</p>
+                          <p className="text-muted-foreground">+1 (786) 234-6478</p>
                         </div>
                       </div>
                       
@@ -112,7 +121,7 @@ const Contact = () => {
                         </div>
                         <div>
                           <p className="font-semibold text-foreground">Email</p>
-                          <p className="text-muted-foreground">thomas@andersonrecruiting.com</p>
+                          <p className="text-muted-foreground">contact@andersoncollegesports.com</p>
                         </div>
                       </div>
                       
@@ -121,8 +130,8 @@ const Contact = () => {
                           <MapPin className="w-5 h-5 text-accent-foreground" />
                         </div>
                         <div>
-                          <p className="font-semibold text-foreground">Office</p>
-                          <p className="text-muted-foreground">123 Athletic Way<br />Recruiting City, RC 12345</p>
+                          <p className="font-semibold text-foreground">Location</p>
+                          <p className="text-muted-foreground">Based in Miami, serving athletes worldwide</p>
                         </div>
                       </div>
                       
@@ -131,33 +140,15 @@ const Contact = () => {
                           <Clock className="w-5 h-5 text-accent-foreground" />
                         </div>
                         <div>
-                          <p className="font-semibold text-foreground">Office Hours</p>
+                          <p className="font-semibold text-foreground">Hours</p>
                           <p className="text-muted-foreground">
-                            Monday - Friday: 9:00 AM - 6:00 PM<br />
-                            Saturday: 10:00 AM - 2:00 PM
+                            Monday to Friday, 9:00 a.m. – 6:00 p.m. (EST)
                           </p>
                         </div>
                       </div>
                     </div>
                   </div>
 
-                  <div className="card-elegant">
-                    <h3 className="mb-4 text-primary">Quick Response Times</h3>
-                    <div className="space-y-3">
-                      <div className="flex justify-between">
-                        <span className="text-muted-foreground">Email inquiries:</span>
-                        <span className="font-semibold text-foreground">Within 24 hours</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-muted-foreground">Urgent matters:</span>
-                        <span className="font-semibold text-foreground">Same day</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-muted-foreground">Consultation requests:</span>
-                        <span className="font-semibold text-foreground">2-3 business days</span>
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
@@ -169,43 +160,42 @@ const Contact = () => {
               <div className="max-w-4xl mx-auto">
                 <div className="text-center mb-12">
                   <HelpCircle className="w-12 h-12 text-accent mx-auto mb-4" />
-                  <h2 className="text-primary">Frequently Asked Questions</h2>
+                  <h2 className="text-primary">Have Questions? I've Got Answers for You</h2>
                 </div>
                 
                 <div className="space-y-6">
                   <div className="card-elegant">
-                    <h3 className="mb-3 text-primary">When should my student-athlete start the recruiting process?</h3>
+                    <h3 className="mb-3 text-primary">When Should We Start the Recruiting Process?</h3>
                     <p className="text-muted-foreground">
-                      The earlier, the better! Ideally, planning should begin in 9th grade to maximize 
-                      opportunities and scholarship potential. However, it's never too late to start - 
-                      we've helped students succeed even when starting their senior year.
+                      The earlier the better - ideally when your athlete is 14-16. Starting early gives families time to prepare properly.
                     </p>
                   </div>
                   
                   <div className="card-elegant">
-                    <h3 className="mb-3 text-primary">How much does the mentorship program cost?</h3>
+                    <h3 className="mb-3 text-primary">What's the Best Way to Get Started?</h3>
                     <p className="text-muted-foreground">
-                      Investment levels vary based on the specific needs and timeline of each student-athlete. 
-                      We offer flexible payment plans and guarantee that the value far exceeds the cost. 
-                      Contact us for a personalized consultation and pricing information.
+                      Begin with our free resources: take the quiz, explore the Learning Hub, and read success stories to understand the process.
                     </p>
                   </div>
                   
                   <div className="card-elegant">
-                    <h3 className="mb-3 text-primary">Do you work with all sports and division levels?</h3>
+                    <h3 className="mb-3 text-primary">How Can I Access All the Free Resources?</h3>
                     <p className="text-muted-foreground">
-                      Absolutely! Our proven system works for all sports at every level - from Division I 
-                      to NAIA and junior colleges. The principles remain the same regardless of sport or 
-                      target division level.
+                      Everything is available on this site: videos, articles, podcast episodes, and downloadable guides - all at no cost.
                     </p>
                   </div>
                   
                   <div className="card-elegant">
-                    <h3 className="mb-3 text-primary">What makes your approach different from other recruiting services?</h3>
+                    <h3 className="mb-3 text-primary">Is Personal Guidance Really Necessary?</h3>
                     <p className="text-muted-foreground">
-                      Our 31 years of experience, proven Game 12 system, and personalized family approach 
-                      set us apart. We don't just provide generic advice - we create customized strategies 
-                      for each student-athlete's unique situation and goals.
+                      Most families find our free resources sufficient. Personal guidance is only for those wanting customized support for specific situations.
+                    </p>
+                  </div>
+
+                  <div className="card-elegant">
+                    <h3 className="mb-3 text-primary">Can I Ask Questions About the Book?</h3>
+                    <p className="text-muted-foreground">
+                      Absolutely! Whether you want to know more about the book content, ordering, or how it fits your family's needs.
                     </p>
                   </div>
                 </div>
@@ -213,24 +203,38 @@ const Contact = () => {
             </div>
           </section>
 
-          {/* Quick Links */}
+          {/* Quick Links Section */}
           <section className="py-16">
             <div className="container mx-auto px-6">
               <div className="max-w-4xl mx-auto text-center">
-                <h2 className="mb-8 text-primary">Ready to Get Started?</h2>
+                <h2 className="mb-8 text-primary">Quick Links to Get Started</h2>
                 <div className="grid md:grid-cols-3 gap-6">
-                  <Button className="btn-gold h-auto py-4 px-6 flex flex-col gap-2">
-                    <span className="font-semibold">Apply for Mentorship</span>
-                    <span className="text-sm opacity-90">Limited spots available</span>
-                  </Button>
-                  <Button className="btn-outline h-auto py-4 px-6 flex flex-col gap-2">
-                    <span className="font-semibold">Schedule Consultation</span>
-                    <span className="text-sm opacity-90">Free 30-minute call</span>
-                  </Button>
-                  <Button className="btn-outline h-auto py-4 px-6 flex flex-col gap-2">
-                    <span className="font-semibold">Book Speaking Event</span>
-                    <span className="text-sm opacity-90">For teams & organizations</span>
-                  </Button>
+                  <div className="card-elegant text-center">
+                    <h3 className="mb-4 text-primary">Learn About the Book</h3>
+                    <Button className="btn-outline w-full">Explore the Book</Button>
+                  </div>
+                  <div className="card-elegant text-center">
+                    <h3 className="mb-4 text-primary">Watch Free Videos</h3>
+                    <Button className="btn-outline w-full">Go to Media Page</Button>
+                  </div>
+                  <div className="card-elegant text-center">
+                    <h3 className="mb-4 text-primary">Schedule a Consultation</h3>
+                    <Button className="btn-gold w-full">Book Now</Button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Social Media Section */}
+          <section className="py-16 bg-muted">
+            <div className="container mx-auto px-6">
+              <div className="max-w-4xl mx-auto text-center">
+                <h2 className="mb-8 text-primary">Follow Me on Social Media</h2>
+                <div className="flex justify-center gap-6">
+                  <Button className="btn-outline">LinkedIn</Button>
+                  <Button className="btn-outline">Instagram</Button>
+                  <Button className="btn-outline">TikTok</Button>
                 </div>
               </div>
             </div>
